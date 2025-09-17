@@ -5,7 +5,7 @@ cmd({
     pattern: "pair",
     alias: ["getpair", "clonebot"],
     react: "✅",
-    desc: "Get pairing code for ARSLAN-MD bot",
+    desc: "Get pairing code for ANAYAT-AI bot",
     category: "download",
     use: ".pair 923452401XXX",
     filename: __filename
@@ -20,7 +20,7 @@ cmd({
         }
 
         // Make API request to get pairing code
-        const response = await axios.get(`https://arslan-md-web.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
+        const response = await axios.get(`https://anayat-ai-pair.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
 
         if (!response.data || !response.data.code) {
             return await reply("❌ Failed to retrieve pairing code. Please try again later.");

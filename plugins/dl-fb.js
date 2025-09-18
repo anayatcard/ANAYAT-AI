@@ -19,7 +19,7 @@ cmd({
     await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
 
     // Fetch video URL from the API
-    const apiUrl = `https://api-aswin-sparky.koyeb.app/api/downloader/fbdl?url=${encodeURIComponent(q)}`;
+    const apiUrl = `https://jawad-tech.vercel.app/downloader?url=${encodeURIComponent(q)}`;
     const { data } = await axios.get(apiUrl);
 
     // Check if the API response is valid
@@ -31,7 +31,7 @@ cmd({
     const videoUrl = data.data.url;
     await conn.sendMessage(from, {
       video: { url: videoUrl },
-      caption: "📥 *Facebook Video Downloaded*\n\n- *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ANAYAT-AI OFFICIAL ❣️*",
+      caption: "📥 *Facebook Video Downloaded*\n\n- *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝚊𝚗𝚊𝚢𝚊𝚝-𝚊𝚒 ❣️*",
     }, { quoted: m });
 
   } catch (error) {
